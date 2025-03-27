@@ -13,6 +13,7 @@ public:
       for (int i = 0; i < n; ++i) {
         const int freq1 = ++range1_cnt[nums[i]];
         const int freq2 = --range2_cnt[nums[i]];
+      
         if (freq1 * 2 > i + 1 && freq2 * 2 > n - 1 - i)
           return i;
         }
