@@ -11,8 +11,7 @@ public:
       for (int i = m - 1; i >= 0; --i) {
         for (int j = n - 1; j >= 0; --j) {
           // take minimum between right and down 
-          // 
-          dp[i][j] = min(1, min(dp[i + 1][j], dp[i][j + 1])) - dungeon[i][j];
+          dp[i][j] = max(1, min(dp[i + 1][j], dp[i][j + 1]) - dungeon[i][j]);
         }
       }
 
